@@ -1,0 +1,9 @@
+Name;Price;Description
+CocaCola;2.2;CocaCola&Company.
+Fanta de naranja;2.2;CocaCola&Company.
+Nestea de maracuyá;2.5;Uno de las bebidas que más apasionan.
+Nestea;2.5;Clásico.
+Fanta de limón;2.2;CocaCola&Company.
+Pepsi;2.2;Mejor que la Cocacola.
+Sprite;2.2;Refrescante con sabor a lima.
+SevenUp;2.2;Mejor que Sprite.

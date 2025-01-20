@@ -1,0 +1,6 @@
+Name;Price;Description
+Café con leche;1;Un cafe con leche de toda la vida.
+Café solo;0.8;Café sin nada de leche.
+Café cortado;1;Café con muy poca leche.
+Manzanilla;1.5;Manzanilla de la abuela.
+Colacao;2;Colacao sin grumos.

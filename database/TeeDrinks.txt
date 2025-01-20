@@ -1,0 +1,8 @@
+Name;Price;Description
+Té blanco;1;Té sin procesar.
+Té verde;1.2;Té verde de toda la vida.
+Té Oolong;1.5;Uno de los tés que más tiempo requiere para crear.
+Té negro;1.2;Se oxída más que cualquier otro té.
+Té de manzanilla;1.5;Reduce su problema de migraña.
+Té de hibiscus;1.5;Para los que aman las infusiones de hierbas.
+Té chai;1.6;El mejor para un clima frío o cuando no se siente en forma.
