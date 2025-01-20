@@ -1,7 +1,5 @@
 package app.model.drinks;
 
-import java.io.Serializable;
-
 public class Drink implements IDrink {
     private String name, description;
     private float price;

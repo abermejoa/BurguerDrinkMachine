@@ -2,8 +2,6 @@ package app.model.machines;
 
 import app.model.drinks.Drink;
 
-public interface IMachine {
-    void pay(int amount);
-    Drink chooseDrink(int id);
+public interface IMachineFactory {
     Drink prepare(Drink drink);
 }
