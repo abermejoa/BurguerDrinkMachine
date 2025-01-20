@@ -32,9 +32,27 @@ si continuar o cancelar)
 
 ---
 
+
 Se me irán ocurriendo mas cosas, pero eso es lo basico.
 
 ---
+
+
+## ESTRUCTURA
+- .app
+  - .model
+    - .interfaces
+      - Iface.java
+      - Iface.java
+    - .machines
+      - Machine.java
+      - Machine.java
+    - .drinks
+      - Drink.java
+  - .view
+  - .controller
+- Main.java
+
 
 ## HITOS
 Ya se nos irán ocurriendo...
