@@ -1,5 +1,7 @@
 package app;
 
+import app.view.Menu;
+
 public class App {
 
     public App() {
@@ -7,8 +9,7 @@ public class App {
     }
 
     public void showMenu() {
-        System.out.println("""
-                """);
+        Menu.getMachine();
     }
 
 }

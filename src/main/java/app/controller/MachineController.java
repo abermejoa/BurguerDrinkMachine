@@ -1,0 +1,31 @@
+package app.controller;
+
+import app.model.machines.IMachineFactory;
+import org.reflections.Reflections;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public abstract class MachineController {
+
+    public static Map<Integer, String> getMachines() {
+
+        Map<Integer, String> machines = new HashMap<Integer, String>();
+        Set<Class<? extends IMachineFactory>> classes = new Reflections("app.model.machines").getSubTypesOf(IMachineFactory.class);
+
+        int i = 0;
+        for (Class<? extends IMachineFactory> clas : classes) {
+            String name = clas.getSimpleName().replace("class app.model.machines.", "");
+            if (!(name.equals("ColdDrinkFactory"))) {
+                name.replace("DrinkFactory", "");
+            }
+            machines.put(i, name);
+
+            i++;
+        }
+
+        return machines;
+    }
+
+}
