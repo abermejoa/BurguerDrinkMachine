@@ -1,4 +1,3 @@
-Name;Price;Description
 Té blanco;1;Té sin procesar.
 Té verde;1.2;Té verde de toda la vida.
 Té Oolong;1.5;Uno de los tés que más tiempo requiere para crear.

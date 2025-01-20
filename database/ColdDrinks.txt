@@ -1,4 +1,3 @@
-Name;Price;Description
 CocaCola;2.2;CocaCola&Company.
 Fanta de naranja;2.2;CocaCola&Company.
 Nestea de maracuyá;2.5;Uno de las bebidas que más apasionan.
