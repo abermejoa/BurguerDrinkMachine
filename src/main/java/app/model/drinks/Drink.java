@@ -1,6 +1,8 @@
 package app.model.drinks;
 
-public class Drink implements IDrink{
+import java.io.Serializable;
+
+public class Drink implements IDrink {
     private String name, description;
     private float price;
 
@@ -37,5 +39,10 @@ public class Drink implements IDrink{
     @Override
     public String prepare() {
         return String.format("This %s is delicious", name);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %s - %s€", name, description, price);
     }
 }
