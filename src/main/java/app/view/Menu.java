@@ -2,36 +2,24 @@ package app.view;
 
 import app.controller.DrinkController;
 import app.controller.MachineController;
-import org.reflections.Reflections;
 
 import java.io.IOException;
-import java.util.Set;
 
 public class Menu {
 
-    /*
-    Set<Class<? extends IHotDrinkFactory>> types =
-            new Reflections("factories") // ""
-                    .getSubTypesOf(IHotDrinkFactory.class);
-        for (Class<? extends IHotDrinkFactory> type : types)
-    {
-        namedFactories.add(new Pair<>(
-                type.getSimpleName().replace("Factory", ""),
-                type.getDeclaredConstructor().newInstance()
-        ));
-    }*/
-    public static void getMachine() {
+    public static void getMachines() {
         MachineController.getMachines()
-                .forEach((number, machine) -> System.out.println(number + ": " + machine));
+                .forEach((number, machine) ->
+                        System.out.println(number + ": " + machine)
+                );
     }
 
-    public static void getDrinks(String machineName) throws IOException {
-        DrinkController.getDrinks(machineName);
+    public static void getDrinks(int machineId) throws IOException {
+        String drinkName = MachineController.getMachines().get(machineId) + "Drinks";
+        DrinkController.getDrinks(drinkName)
+                .forEach((k, v) ->
+                        System.out.println(k + ": " + v)
+                );
     }
-}
 
-class Demo {
-    public static void main(String[] args) throws IOException {
-        Menu.getDrinks("CoffeController");
-    }
 }

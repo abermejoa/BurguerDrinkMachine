@@ -14,11 +14,13 @@ public abstract class MachineController {
         Map<Integer, String> machines = new HashMap<Integer, String>();
         Set<Class<? extends IMachineFactory>> classes = new Reflections("app.model.machines").getSubTypesOf(IMachineFactory.class);
 
-        int i = 0;
+        int i = 1;
         for (Class<? extends IMachineFactory> clas : classes) {
-            String name = clas.getSimpleName().replace("class app.model.machines.", "");
-            if (!(name.equals("ColdDrinkFactory"))) {
-                name.replace("DrinkFactory", "");
+            String name = clas.getSimpleName()
+                    .replace("class app.model.machines.", "")
+                    .replace("DrinkFactory", "");
+            if (name.equals("Cold")) {
+                name += " drinks";
             }
             machines.put(i, name);
 
