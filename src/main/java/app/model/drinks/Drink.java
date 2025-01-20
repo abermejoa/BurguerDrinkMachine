@@ -1,6 +1,6 @@
 package app.model.drinks;
 
-public class Drink implements IDrink{
+public class Drink implements IDrink {
     private String name, description;
     private float price;
 
