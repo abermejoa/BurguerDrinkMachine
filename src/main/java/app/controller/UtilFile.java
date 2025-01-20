@@ -75,7 +75,7 @@ public class UtilFile implements IUtilFile{
 
     /**
      *This only count the list it receives when it calls the method whose name is recolectSalesDrinksData()
-     * @return
+     * @return int
      * @throws IOException
      */
     @Override
