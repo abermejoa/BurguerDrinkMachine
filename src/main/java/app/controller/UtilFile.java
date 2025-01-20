@@ -15,15 +15,16 @@ public class UtilFile implements IUtilFile{
     private static UtilFile instance;
 
     /**
-     *
+     *Private constructor for the class.
      */
     private UtilFile(){
         System.out.println("Recogiendo datos");
     }
 
     /**
-     *
-     * @return
+     *Return an instance of one object of the class
+     * Check if there is any object created
+     * @return UtilFile
      */
     public static UtilFile getInstance(){
         if (instance==null){
@@ -34,7 +35,8 @@ public class UtilFile implements IUtilFile{
 
 
     /**
-     *
+     * Return a map of drinks. This map contains an id, and
+     * the drink object
      * @param name
      * @return Map<Integer,Drink>
      * @throws IOException
@@ -55,24 +57,24 @@ public class UtilFile implements IUtilFile{
     }
 
     /**
-     *
+     *Write in a file, whose name is SoldDrinks.txt and his path is database/SoldDrinks.txt, the drinks, that have been sold.
+     * Write the list of drinks that it receive by param.
      * @param drinks
      * @throws IOException
      */
     @Override
     public void addDrink(List<Drink> drinks) throws IOException {
         try(
-                FileOutputStream fileOutputStream = new FileOutputStream(rutaBuilder("SalesDrinks"));
+                FileOutputStream fileOutputStream = new FileOutputStream(rutaBuilder("SoldDrinks"));
                 ObjectOutputStream oos = new ObjectOutputStream(fileOutputStream)
         ) {
                 oos.writeObject(drinks);
                 System.out.println("Se han guardado los objetos");
-
         }
     }
 
     /**
-     *
+     *This only count the list it receives when it calls the method whose name is recolectSalesDrinksData()
      * @return
      * @throws IOException
      */
@@ -82,8 +84,8 @@ public class UtilFile implements IUtilFile{
     }
 
     /**
-     *
-     * @return
+     *This method read the Object List<Drink> that is container in the file "SoldDrinks.txt"
+     * @return List<Drink>
      * @throws IOException
      * @throws RuntimeException
      */
@@ -102,31 +104,21 @@ public class UtilFile implements IUtilFile{
     }
 
     /**
-     *
+     *Build a simple path for the directory database/
      * @param name
-     * @return
+     * @return String
      */
     private String rutaBuilder(String name){
         return "database/"+name+".txt";
     }
 
     /**
-     *
+     *Only modify the price that is as String to float, because the Drink's object have a float property for the price
      * @param precio
-     * @return
+     * @return float
      * @throws NumberFormatException
      */
     private float precioToFloat(String precio)throws NumberFormatException{
         return Float.parseFloat(precio);
-    }
-}
-
-class Demo{
-    public static void main(String[] args) throws IOException {
-        Map<Integer, Drink> drinksMap = UtilFile.getInstance().getDrinks("TeeDrinks");
-        System.out.println(drinksMap);
-        List<Drink> bebidas = drinksMap.values().stream().toList();
-        UtilFile.getInstance().addDrink(bebidas);
-        System.out.println(UtilFile.getInstance().recolectSalesDrinksData());
     }
 }
