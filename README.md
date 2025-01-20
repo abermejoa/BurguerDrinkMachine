@@ -53,6 +53,20 @@ Se me irán ocurriendo mas cosas, pero eso es lo basico.
   - .controller
 - Main.java
 
+---
+
+### INTERFACES
+
+#### IMachine
+void pay(int amount)
+Drink chooseDrink(int drinkId)
+Drink prepare(Drink drink)
+
+---
+
+### IDrink
+String prepare()
+
 
 ## HITOS
 Ya se nos irán ocurriendo...
