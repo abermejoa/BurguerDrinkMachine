@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Menu {
+public abstract class Menu {
     public static void showMenu(Scanner sc){
         System.out.println("Selecciona una maquina: ");
         getMachines();
